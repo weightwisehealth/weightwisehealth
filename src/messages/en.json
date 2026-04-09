@@ -1,0 +1,67 @@
+{
+  "nav": {
+    "home": "Home",
+    "blog": "Blog",
+    "research": "Research",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "title": "Evidence-Based Hormone Optimization",
+      "subtitle": "Your comprehensive resource for TRT, HRT, peptides, and longevity medicine",
+      "cta": "Explore Articles"
+    },
+    "featured": {
+      "title": "Featured Articles",
+      "readMore": "Read More",
+      "minRead": "min read"
+    },
+    "about": {
+      "title": "About WeightWise Health",
+      "description": "We provide evidence-based, comprehensive information about hormone optimization, peptides, and longevity medicine. Our mission is to democratize access to cutting-edge health knowledge.",
+      "mission": "Our Mission",
+      "missionText": "To empower individuals with accurate, science-backed information to make informed decisions about their health and wellness."
+    },
+    "newsletter": {
+      "title": "Stay Updated",
+      "description": "Get weekly research updates, new articles, and protocol insights delivered to your inbox.",
+      "placeholder": "Enter your email",
+      "subscribe": "Subscribe",
+      "success": "Thanks for subscribing!"
+    }
+  },
+  "footer": {
+    "disclaimer": "Medical Disclaimer",
+    "disclaimerText": "WeightWise Health provides educational information only. This is not medical advice. Always consult with a qualified healthcare provider before starting any treatment.",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "copyright": "© 2026 WeightWise Health. All rights reserved."
+  },
+  "article": {
+    "disclaimer": "⚠️ MEDICAL DISCLAIMER",
+    "disclaimerText": "This article is for educational purposes only and does not constitute medical advice. Always consult with a qualified healthcare provider before starting any hormone therapy. Information presented is based on current research and clinical experience.",
+    "tableOfContents": "Table of Contents",
+    "references": "References",
+    "relatedArticles": "Related Articles",
+    "newsletter": {
+      "title": "Get More Insights Like This",
+      "description": "Subscribe to receive weekly research updates and new articles.",
+      "cta": "Subscribe Now"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Evidence-based articles on hormone optimization, peptides, and longevity",
+    "categories": {
+      "all": "All",
+      "hormones": "Hormones",
+      "peptides": "Peptides",
+      "nutrition": "Nutrition",
+      "diagnostics": "Diagnostics"
+    },
+    "noArticles": "No articles found",
+    "readMore": "Read More"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "blog": "Blog",
+    "research": "Investigación",
+    "about": "Acerca",
+    "contact": "Contacto"
+  },
+  "home": {
+    "hero": {
+      "title": "Optimización Hormonal Basada en Evidencia",
+      "subtitle": "Tu recurso integral para TRT, TRH, péptidos y medicina de longevidad",
+      "cta": "Explorar Artículos"
+    },
+    "featured": {
+      "title": "Artículos Destacados",
+      "readMore": "Leer Más",
+      "minRead": "min de lectura"
+    },
+    "about": {
+      "title": "Acerca de WeightWise Health",
+      "description": "Proporcionamos información integral y basada en evidencia sobre optimización hormonal, péptidos y medicina de longevidad. Nuestra misión es democratizar el acceso al conocimiento de salud de vanguardia.",
+      "mission": "Nuestra Misión",
+      "missionText": "Empoderar a las personas con información precisa y respaldada por la ciencia para tomar decisiones informadas sobre su salud y bienestar."
+    },
+    "newsletter": {
+      "title": "Mantente Actualizado",
+      "description": "Recibe actualizaciones semanales de investigación, nuevos artículos e información sobre protocolos en tu bandeja de entrada.",
+      "placeholder": "Ingresa tu correo electrónico",
+      "subscribe": "Suscribirse",
+      "success": "¡Gracias por suscribirte!"
+    }
+  },
+  "footer": {
+    "disclaimer": "Descargo Médico",
+    "disclaimerText": "WeightWise Health proporciona solo información educativa. Esto no es consejo médico. Siempre consulte con un proveedor de atención médica calificado antes de comenzar cualquier tratamiento.",
+    "legal": "Legal",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Servicio",
+    "copyright": "© 2026 WeightWise Health. Todos los derechos reservados."
+  },
+  "article": {
+    "disclaimer": "⚠️ DESCARGO MÉDICO",
+    "disclaimerText": "Este artículo es solo para fines educativos y no constituye consejo médico. Siempre consulte con un proveedor de atención médica calificado antes de comenzar cualquier terapia hormonal. La información presentada se basa en investigaciones y experiencia clínica actuales.",
+    "tableOfContents": "Tabla de Contenidos",
+    "references": "Referencias",
+    "relatedArticles": "Artículos Relacionados",
+    "newsletter": {
+      "title": "Obtén Más Información Como Esta",
+      "description": "Suscríbete para recibir actualizaciones semanales de investigación y nuevos artículos.",
+      "cta": "Suscribirse Ahora"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Artículos basados en evidencia sobre optimización hormonal, péptidos y longevidad",
+    "categories": {
+      "all": "Todos",
+      "hormones": "Hormonas",
+      "peptides": "Péptidos",
+      "nutrition": "Nutrición",
+      "diagnostics": "Diagnósticos"
+    },
+    "noArticles": "No se encontraron artículos",
+    "readMore": "Leer Más"
+  }
+}
