@@ -1,0 +1,67 @@
+{
+  "nav": {
+    "home": "Início",
+    "blog": "Blog",
+    "research": "Pesquisa",
+    "about": "Sobre",
+    "contact": "Contato"
+  },
+  "home": {
+    "hero": {
+      "title": "Otimização Hormonal Baseada em Evidências",
+      "subtitle": "Seu recurso completo para TRT, TRH, peptídeos e medicina de longevidade",
+      "cta": "Explorar Artigos"
+    },
+    "featured": {
+      "title": "Artigos em Destaque",
+      "readMore": "Ler Mais",
+      "minRead": "min de leitura"
+    },
+    "about": {
+      "title": "Sobre WeightWise Health",
+      "description": "Fornecemos informações abrangentes e baseadas em evidências sobre otimização hormonal, peptídeos e medicina de longevidade. Nossa missão é democratizar o acesso ao conhecimento de saúde de ponta.",
+      "mission": "Nossa Missão",
+      "missionText": "Capacitar indivíduos com informações precisas e respaldadas pela ciência para tomar decisões informadas sobre sua saúde e bem-estar."
+    },
+    "newsletter": {
+      "title": "Mantenha-se Atualizado",
+      "description": "Receba atualizações semanais de pesquisa, novos artigos e insights sobre protocolos direto na sua caixa de entrada.",
+      "placeholder": "Digite seu e-mail",
+      "subscribe": "Inscrever-se",
+      "success": "Obrigado por se inscrever!"
+    }
+  },
+  "footer": {
+    "disclaimer": "Aviso Médico",
+    "disclaimerText": "WeightWise Health fornece apenas informações educacionais. Isto não é aconselhamento médico. Sempre consulte um profissional de saúde qualificado antes de iniciar qualquer tratamento.",
+    "legal": "Legal",
+    "privacy": "Política de Privacidade",
+    "terms": "Termos de Serviço",
+    "copyright": "© 2026 WeightWise Health. Todos os direitos reservados."
+  },
+  "article": {
+    "disclaimer": "⚠️ AVISO MÉDICO",
+    "disclaimerText": "Este artigo é apenas para fins educacionais e não constitui aconselhamento médico. Sempre consulte um profissional de saúde qualificado antes de iniciar qualquer terapia hormonal. As informações apresentadas são baseadas em pesquisas e experiência clínica atuais.",
+    "tableOfContents": "Sumário",
+    "references": "Referências",
+    "relatedArticles": "Artigos Relacionados",
+    "newsletter": {
+      "title": "Receba Mais Insights Como Este",
+      "description": "Inscreva-se para receber atualizações semanais de pesquisa e novos artigos.",
+      "cta": "Inscrever-se Agora"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Artigos baseados em evidências sobre otimização hormonal, peptídeos e longevidade",
+    "categories": {
+      "all": "Todos",
+      "hormones": "Hormônios",
+      "peptides": "Peptídeos",
+      "nutrition": "Nutrição",
+      "diagnostics": "Diagnósticos"
+    },
+    "noArticles": "Nenhum artigo encontrado",
+    "readMore": "Ler Mais"
+  }
+}
