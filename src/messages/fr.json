@@ -1,0 +1,37 @@
+{
+  "home": {
+    "title": "Optimisation Hormonale Basée sur les Preuves",
+    "subtitle": "Votre ressource complète pour la TRT, la HRT, les peptides et la médecine de longévité",
+    "cta": "Explorer les Articles"
+  },
+  "nav": {
+    "home": "Accueil",
+    "blog": "Blog",
+    "research": "Recherche",
+    "about": "À Propos"
+  },
+  "featured": {
+    "title": "Articles en Vedette"
+  },
+  "about": {
+    "title": "À Propos de WeightWise Health",
+    "mission": "Notre Mission",
+    "description": "Nous fournissons des informations complètes et basées sur des preuves concernant l'optimisation hormonale, les peptides et la médecine de longévité. Notre mission est de démocratiser l'accès aux connaissances de pointe en matière de santé.",
+    "missionText": "Donner aux individus les moyens de prendre des décisions éclairées concernant leur santé et leur bien-être grâce à des informations précises et scientifiquement fondées."
+  },
+  "newsletter": {
+    "title": "Restez Informé",
+    "description": "Recevez des mises à jour de recherche hebdomadaires, de nouveaux articles et des informations sur les protocoles directement dans votre boîte de réception.",
+    "button": "S'abonner"
+  },
+  "footer": {
+    "disclaimer": "Avertissement Médical",
+    "disclaimerText": "WeightWise Health fournit des informations éducatives uniquement. Ce n'est pas un avis médical. Consultez toujours un professionnel de santé qualifié avant de commencer tout traitement.",
+    "tagline": "Optimisation hormonale et médecine de longévité basées sur les preuves.",
+    "legal": "Légal",
+    "privacy": "Politique de Confidentialité",
+    "terms": "Conditions d'Utilisation",
+    "contact": "Contact",
+    "rights": "Tous droits réservés."
+  }
+}

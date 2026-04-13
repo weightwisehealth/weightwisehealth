@@ -8,10 +8,11 @@ export default createMiddleware({
   // Used when no locale matches
   defaultLocale: 'en',
   
-  localePrefix: 'always'
+  localePrefix: 'always',
+  // Detect locale from browser but default to English
+  localeDetection: true
 });
-
 export const config = {
   // Match only internationalized pathnames
-  matcher: ['/', '/(pt|en|es)/:path*']
+  matcher: ['/', '/(pt|en|es|fr|de|it|ru)/:path*']
 };

@@ -1,0 +1,37 @@
+{
+  "home": {
+    "title": "Evidenzbasierte Hormonoptimierung",
+    "subtitle": "Ihre umfassende Ressource für TRT, HRT, Peptide und Langlebigkeitsmedizin",
+    "cta": "Artikel erkunden"
+  },
+  "nav": {
+    "home": "Startseite",
+    "blog": "Blog",
+    "research": "Forschung",
+    "about": "Über uns"
+  },
+  "featured": {
+    "title": "Empfohlene Artikel"
+  },
+  "about": {
+    "title": "Über WeightWise Health",
+    "mission": "Unsere Mission",
+    "description": "Wir bieten evidenzbasierte, umfassende Informationen über Hormonoptimierung, Peptide und Langlebigkeitsmedizin. Unsere Mission ist es, den Zugang zu modernsten Gesundheitskenntnissen zu demokratisieren.",
+    "missionText": "Menschen mit genauen, wissenschaftlich fundierten Informationen zu befähigen, fundierte Entscheidungen über ihre Gesundheit und ihr Wohlbefinden zu treffen."
+  },
+  "newsletter": {
+    "title": "Bleiben Sie informiert",
+    "description": "Erhalten Sie wöchentliche Forschungsupdates, neue Artikel und Protokolleinblicke direkt in Ihren Posteingang.",
+    "button": "Abonnieren"
+  },
+  "footer": {
+    "disclaimer": "Medizinischer Haftungsausschluss",
+    "disclaimerText": "WeightWise Health bietet nur Bildungsinformationen. Dies ist keine medizinische Beratung. Konsultieren Sie immer einen qualifizierten Gesundheitsdienstleister, bevor Sie eine Behandlung beginnen.",
+    "tagline": "Evidenzbasierte Hormonoptimierung und Langlebigkeitsmedizin.",
+    "legal": "Rechtliches",
+    "privacy": "Datenschutzrichtlinie",
+    "terms": "Nutzungsbedingungen",
+    "contact": "Kontakt",
+    "rights": "Alle Rechte vorbehalten."
+  }
+}

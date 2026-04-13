@@ -1,0 +1,37 @@
+{
+  "home": {
+    "title": "Ottimizzazione Ormonale Basata sull'Evidenza",
+    "subtitle": "La tua risorsa completa per TRT, HRT, peptidi e medicina della longevità",
+    "cta": "Esplora gli Articoli"
+  },
+  "nav": {
+    "home": "Home",
+    "blog": "Blog",
+    "research": "Ricerca",
+    "about": "Chi Siamo"
+  },
+  "featured": {
+    "title": "Articoli in Evidenza"
+  },
+  "about": {
+    "title": "Chi è WeightWise Health",
+    "mission": "La Nostra Missione",
+    "description": "Forniamo informazioni complete e basate sull'evidenza sull'ottimizzazione ormonale, i peptidi e la medicina della longevità. La nostra missione è democratizzare l'accesso alle conoscenze sanitarie all'avanguardia.",
+    "missionText": "Dare alle persone gli strumenti per prendere decisioni informate sulla loro salute e benessere attraverso informazioni accurate e scientificamente fondate."
+  },
+  "newsletter": {
+    "title": "Rimani Aggiornato",
+    "description": "Ricevi aggiornamenti settimanali sulla ricerca, nuovi articoli e approfondimenti sui protocolli direttamente nella tua casella di posta.",
+    "button": "Iscriviti"
+  },
+  "footer": {
+    "disclaimer": "Disclaimer Medico",
+    "disclaimerText": "WeightWise Health fornisce solo informazioni educative. Questo non è un consiglio medico. Consulta sempre un professionista sanitario qualificato prima di iniziare qualsiasi trattamento.",
+    "tagline": "Ottimizzazione ormonale e medicina della longevità basate sull'evidenza.",
+    "legal": "Legale",
+    "privacy": "Privacy Policy",
+    "terms": "Termini di Servizio",
+    "contact": "Contatti",
+    "rights": "Tutti i diritti riservati."
+  }
+}
