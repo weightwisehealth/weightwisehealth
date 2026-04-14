@@ -13,6 +13,10 @@ export default function Header() {
     {code: 'en', name: 'EN', flag: '🇺🇸'},
     {code: 'es', name: 'ES', flag: '🇪🇸'},
     {code: 'pt', name: 'PT', flag: '🇧🇷'},
+    {code: 'fr', name: 'FR', flag: '🇫🇷'},
+    {code: 'de', name: 'DE', flag: '🇩🇪'},
+    {code: 'it', name: 'IT', flag: '🇮🇹'},
+    {code: 'ru', name: 'RU', flag: '🇷🇺'},
   ];
 
   const switchLocale = (newLocale: string) => {
