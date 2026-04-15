@@ -4,6 +4,7 @@ import {Inter} from 'next/font/google';
 import '../globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import GoogleAnalytics from '@/components/analytics/GoogleAnalytics';
 
 const inter = Inter({subsets: ['latin']});
 
@@ -25,6 +26,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <body className={inter.className}>
+        <GoogleAnalytics />
         <NextIntlClientProvider messages={messages}>
           <div className="flex flex-col min-h-screen">
             <Header />
