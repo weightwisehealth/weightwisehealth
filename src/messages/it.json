@@ -1,0 +1,26 @@
+{
+  "nav": {
+    "home": "Home",
+    "blog": "Blog",
+    "research": "Ricerca",
+    "about": "Chi Siamo",
+    "contact": "Contatti"
+  },
+  "home": {
+    "hero": {
+      "title": "Ottimizzazione Ormonale Basata su Prove",
+      "subtitle": "La tua risorsa completa per TRT, HRT, peptidi e medicina della longevità",
+      "cta": "Esplora Articoli"
+    },
+    "featured": {
+      "title": "Articoli in Evidenza",
+      "readMore": "Leggi di Più",
+      "minRead": "min di lettura"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Articoli basati su prove sull'ottimizzazione ormonale, peptidi e longevità",
+    "readMore": "Leggi di Più"
+  }
+}

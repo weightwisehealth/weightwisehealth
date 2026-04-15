@@ -1,0 +1,26 @@
+{
+  "nav": {
+    "home": "首页",
+    "blog": "博客",
+    "research": "研究",
+    "about": "关于",
+    "contact": "联系"
+  },
+  "home": {
+    "hero": {
+      "title": "循证激素优化",
+      "subtitle": "您的TRT、HRT、肽和长寿医学综合资源",
+      "cta": "浏览文章"
+    },
+    "featured": {
+      "title": "精选文章",
+      "readMore": "阅读更多",
+      "minRead": "分钟阅读"
+    }
+  },
+  "blog": {
+    "title": "博客",
+    "subtitle": "关于激素优化、肽和长寿的循证文章",
+    "readMore": "阅读更多"
+  }
+}

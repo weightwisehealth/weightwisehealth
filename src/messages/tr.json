@@ -1,0 +1,26 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "blog": "Blog",
+    "research": "Araştırma",
+    "about": "Hakkında",
+    "contact": "İletişim"
+  },
+  "home": {
+    "hero": {
+      "title": "Kanıta Dayalı Hormon Optimizasyonu",
+      "subtitle": "TRT, HRT, peptitler ve uzun ömür tıbbı için kapsamlı kaynağınız",
+      "cta": "Makaleleri Keşfet"
+    },
+    "featured": {
+      "title": "Öne Çıkan Makaleler",
+      "readMore": "Devamını Oku",
+      "minRead": "dakika okuma"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Hormon optimizasyonu, peptitler ve uzun ömür hakkında kanıta dayalı makaleler",
+    "readMore": "Devamını Oku"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "blog": "Blog",
+    "research": "Forschung",
+    "about": "Über uns",
+    "contact": "Kontakt"
+  },
+  "home": {
+    "hero": {
+      "title": "Evidenzbasierte Hormonoptimierung",
+      "subtitle": "Ihre umfassende Ressource für TRT, HRT, Peptide und Langlebigkeitsmedizin",
+      "cta": "Artikel Erkunden"
+    },
+    "featured": {
+      "title": "Ausgewählte Artikel",
+      "readMore": "Mehr Lesen",
+      "minRead": "Min. Lesezeit"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Evidenzbasierte Artikel über Hormonoptimierung, Peptide und Langlebigkeit",
+    "readMore": "Mehr Lesen"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "blog": "ブログ",
+    "research": "研究",
+    "about": "概要",
+    "contact": "お問い合わせ"
+  },
+  "home": {
+    "hero": {
+      "title": "エビデンスベースのホルモン最適化",
+      "subtitle": "TRT、HRT、ペプチド、長寿医学の総合リソース",
+      "cta": "記事を見る"
+    },
+    "featured": {
+      "title": "注目記事",
+      "readMore": "続きを読む",
+      "minRead": "分で読める"
+    }
+  },
+  "blog": {
+    "title": "ブログ",
+    "subtitle": "ホルモン最適化、ペプチド、長寿に関するエビデンスベースの記事",
+    "readMore": "続きを読む"
+  }
+}

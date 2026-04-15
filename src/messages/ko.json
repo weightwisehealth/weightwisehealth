@@ -1,0 +1,26 @@
+{
+  "nav": {
+    "home": "홈",
+    "blog": "블로그",
+    "research": "연구",
+    "about": "소개",
+    "contact": "연락처"
+  },
+  "home": {
+    "hero": {
+      "title": "증거 기반 호르몬 최적화",
+      "subtitle": "TRT, HRT, 펩타이드 및 장수 의학을 위한 종합 리소스",
+      "cta": "기사 보기"
+    },
+    "featured": {
+      "title": "주요 기사",
+      "readMore": "더 읽기",
+      "minRead": "분 읽기"
+    }
+  },
+  "blog": {
+    "title": "블로그",
+    "subtitle": "호르몬 최적화, 펩타이드 및 장수에 관한 증거 기반 기사",
+    "readMore": "더 읽기"
+  }
+}
