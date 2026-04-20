@@ -86,7 +86,9 @@ export default function ProductsPage() {
           {/* CTA Button */}
           <div className="text-center">
             
-              href="#"
+              href="https://pay.hotmart.com/M105463581A"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block bg-primary-600 hover:bg-primary-700 text-white font-bold text-xl px-12 py-4 rounded-lg transition shadow-lg hover:shadow-xl"
             >
               {t('cta.button')}
