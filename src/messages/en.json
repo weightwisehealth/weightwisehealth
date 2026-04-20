@@ -63,5 +63,95 @@
     },
     "noArticles": "No articles found",
     "readMore": "Read More"
+  },
+  "products": {
+    "meta": {
+      "title": "TRT Protocol Starter Kit - Complete Guide | WeightWise Health",
+      "description": "Evidence-based TRT protocols, bloodwork interpretation, AI dosing guides. Everything you need to optimize your hormone therapy."
+    },
+    "badge": "BEST SELLER",
+    "hero": {
+      "title": "TRT Protocol Starter Kit",
+      "subtitle": "Evidence-Based Hormone Optimization",
+      "description": "Stop guessing. Start optimizing. Get the exact protocols used by advanced TRT users."
+    },
+    "product": {
+      "name": "Complete TRT Protocol System",
+      "tagline": "One-time payment. Lifetime access."
+    },
+    "included": {
+      "title": "What's Included:",
+      "module1": {
+        "title": "Injection Frequency Calculator",
+        "description": "Interactive Excel tool. Input your total weekly dose, get precise per-injection dosing for any frequency (EOD, E3.5D, weekly). Includes stability charts."
+      },
+      "module2": {
+        "title": "Bloodwork Interpretation Guide (20 pages)",
+        "description": "Decode your labs like a pro. Total T vs Free T, SHBG analysis, E2 management, optimal ranges (not just 'normal'). Know exactly what your numbers mean."
+      },
+      "module3": {
+        "title": "AI Dosing Protocols (15 pages)",
+        "description": "Arimidex vs Aromasin: half-lives, dosing schedules, when to use (and when NOT to). Prevent high E2 without crashing it. Science-backed protocols."
+      },
+      "module4": {
+        "title": "Weekly Optimization Checklist",
+        "description": "Track injections, symptoms, bloodwork timing. Stay dialed in. PDF printable or digital."
+      }
+    },
+    "cta": {
+      "button": "Get Instant Access - $197",
+      "guarantee": "30-day money-back guarantee. No questions asked."
+    },
+    "testimonials": {
+      "title": "What Users Say:",
+      "testimonial1": {
+        "text": "EOD protocol eliminated my mood swings completely. Wish I found this 2 years ago.",
+        "author": "— J.M., Texas"
+      },
+      "testimonial2": {
+        "text": "Bloodwork guide is a game changer. My doctor was reading my labs wrong for 3 years.",
+        "author": "— R.K., California"
+      },
+      "testimonial3": {
+        "text": "Best $197 I spent on TRT. Paid for itself by avoiding one wrong AI dose.",
+        "author": "— A.D., Florida"
+      }
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "About WeightWise Health - Evidence-Based Hormone Education",
+      "description": "Learn about our mission to democratize access to accurate, science-backed hormone optimization protocols and longevity medicine information."
+    },
+    "hero": {
+      "title": "About WeightWise Health",
+      "subtitle": "Democratizing access to evidence-based hormone optimization"
+    },
+    "mission": {
+      "title": "Our Mission",
+      "paragraph1": "WeightWise Health was created to fill a critical gap in hormone optimization education. Too many people rely on outdated clinic protocols, broscience from forums, or incomplete information that leads to suboptimal results.",
+      "paragraph2": "We believe everyone deserves access to the same evidence-based protocols that advanced users and clinicians use—without the gatekeeping, without the upsells, and without the BS.",
+      "paragraph3": "Our approach is simple: distill the latest research, clinical experience, and real-world results into actionable protocols you can use today. Whether you're optimizing testosterone, exploring peptides, or managing weight with GLP-1s, we provide the roadmap."
+    },
+    "different": {
+      "title": "Why We're Different",
+      "point1": {
+        "title": "Evidence-Based",
+        "description": "Every protocol backed by research. No broscience, no anecdotes presented as facts. Just data."
+      },
+      "point2": {
+        "title": "No Gatekeeping",
+        "description": "Information should be accessible. We don't hide protocols behind expensive consults or memberships."
+      },
+      "point3": {
+        "title": "Real Protocols",
+        "description": "Actual dosages, frequencies, and management strategies. Not vague advice. Actionable information."
+      }
+    },
+    "cta": {
+      "title": "Ready to Optimize?",
+      "description": "Get the complete TRT protocol system used by thousands.",
+      "button": "View TRT Starter Kit →"
+    }
   }
 }
