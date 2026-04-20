@@ -14,7 +14,6 @@ export default function ProductsPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary-600 to-primary-800 text-white py-20">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-5xl font-bold mb-6">{t('hero.title')}</h1>
@@ -23,7 +22,6 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      {/* Product Section */}
       <section className="max-w-4xl mx-auto px-4 py-16">
         <div className="bg-white rounded-2xl shadow-xl p-12">
           <div className="text-center mb-12">
@@ -37,7 +35,6 @@ export default function ProductsPage() {
             <p className="text-xl text-gray-600">{t('product.tagline')}</p>
           </div>
 
-          {/* What's Included */}
           <div className="mb-12">
             <h3 className="text-2xl font-bold mb-6">{t('included.title')}</h3>
             <div className="space-y-4">
@@ -83,7 +80,6 @@ export default function ProductsPage() {
             </div>
           </div>
 
-          {/* CTA Button */}
           <div className="text-center">
             
               href="https://pay.hotmart.com/M105463581A"
@@ -96,20 +92,19 @@ export default function ProductsPage() {
             <p className="mt-4 text-sm text-gray-500">{t('cta.guarantee')}</p>
           </div>
 
-          {/* Testimonials */}
           <div className="mt-16 pt-12 border-t border-gray-200">
             <h3 className="text-2xl font-bold mb-8 text-center">{t('testimonials.title')}</h3>
             <div className="space-y-6">
               <div className="bg-gray-50 p-6 rounded-lg">
-                <p className="text-gray-700 mb-4">"{t('testimonials.testimonial1.text')}"</p>
+                <p className="text-gray-700 mb-4">&quot;{t('testimonials.testimonial1.text')}&quot;</p>
                 <p className="text-sm text-gray-500">{t('testimonials.testimonial1.author')}</p>
               </div>
               <div className="bg-gray-50 p-6 rounded-lg">
-                <p className="text-gray-700 mb-4">"{t('testimonials.testimonial2.text')}"</p>
+                <p className="text-gray-700 mb-4">&quot;{t('testimonials.testimonial2.text')}&quot;</p>
                 <p className="text-sm text-gray-500">{t('testimonials.testimonial2.author')}</p>
               </div>
               <div className="bg-gray-50 p-6 rounded-lg">
-                <p className="text-gray-700 mb-4">"{t('testimonials.testimonial3.text')}"</p>
+                <p className="text-gray-700 mb-4">&quot;{t('testimonials.testimonial3.text')}&quot;</p>
                 <p className="text-sm text-gray-500">{t('testimonials.testimonial3.author')}</p>
               </div>
             </div>
