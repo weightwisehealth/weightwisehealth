@@ -39,7 +39,7 @@ function AnnouncementBar() {
     }}>
       <p style={{ margin: 0, fontFamily: inter.style.fontFamily, fontSize: '13px', color: '#fff', fontWeight: 500 }}>
         We are redefining human optimization. Be one of the first {spots} to access The Optimization Bible —{' '}
-        <strong>1 year at $49.90, guaranteed.</strong> After that, renewal at 70%.
+        <strong>1 year at $79.90, guaranteed.</strong> After that, renewal at 70%.
       </p>
     </div>
   )
@@ -94,7 +94,7 @@ function Hero() {
         }}>
           <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: colors.green, display: 'inline-block' }} />
           <span style={{ fontFamily: spaceMono.style.fontFamily, fontSize: '11px', color: colors.blue, letterSpacing: '0.08em' }}>
-            FOUNDING ACCESS — 500 SPOTS ONLY
+            FOUNDING ACCESS — 100 SPOTS ONLY
           </span>
         </div>
 
@@ -119,7 +119,7 @@ function Hero() {
           margin: '0 0 40px',
           maxWidth: '520px',
         }}>
-          22 chapters. Evidence-based protocols for hormones, peptides, and GLP-1. 
+          40 chapters. Evidence-based protocols for hormones, peptides, and GLP-1. 
           Built on PubMed research. Designed for men and women who refuse to operate below capacity.
         </p>
 
@@ -137,7 +137,7 @@ function Hero() {
             letterSpacing: '0.02em',
             transition: 'background 0.2s',
           }}>
-            Get Founding Access — $49.90 →
+            Get Founding Access — $79.90 →
           </a>
           <div style={{ fontFamily: spaceMono.style.fontFamily, fontSize: '12px', color: colors.textSecondary }}>
             <div>✓ Instant PDF delivery</div>
@@ -425,7 +425,7 @@ function Pricing() {
         padding: '48px 36px',
       }}>
         <div style={{ fontFamily: spaceMono.style.fontFamily, fontSize: '12px', color: colors.blue, letterSpacing: '0.1em', marginBottom: '16px' }}>
-          FIRST 500 ONLY
+          FIRST 100 ONLY
         </div>
         <div style={{
           fontFamily: spaceGrotesk.style.fontFamily,
@@ -434,14 +434,14 @@ function Pricing() {
           color: colors.textPrimary,
           lineHeight: 1,
           margin: '0 0 8px',
-        }}>$49.90</div>
+        }}>$79.90</div>
         <div style={{ fontFamily: inter.style.fontFamily, fontSize: '14px', color: colors.textSecondary, marginBottom: '32px' }}>
           Locked for 1 year. Renewal at 70% after that.
         </div>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '36px', textAlign: 'left' }}>
           {[
-            'The Optimization Bible — 22 chapters + 4 appendices',
+            'The Optimization Bible — 40 chapters + 4 appendices',
             'Instant PDF delivery',
             'All future updates included',
             '1-year founding price guarantee',
@@ -466,7 +466,7 @@ function Pricing() {
           textDecoration: 'none',
           letterSpacing: '0.02em',
         }}>
-          Get Founding Access — $49.90 →
+          Get Founding Access — $79.90 →
         </a>
 
         <p style={{ fontFamily: spaceMono.style.fontFamily, fontSize: '11px', color: colors.textSecondary, marginTop: '16px' }}>
@@ -491,7 +491,7 @@ function FAQ() {
     },
     {
       q: 'What does the 1-year price lock mean?',
-      a: 'You pay $49.90 today. For the next 12 months, your price stays at $49.90. After that, renewal is offered at 70% of whatever the current price is.',
+      a: 'You pay $79.90 today. For the next 12 months, your price stays at $79.90. After that, renewal is offered at 70% of whatever the current price is.',
     },
     {
       q: 'What format is the Bible?',
@@ -574,7 +574,7 @@ function FooterCTA() {
         color: colors.textSecondary,
         margin: '0 0 40px',
       }}>
-        500 founding spots. One price. One year locked.
+        100 founding spots. One price. One year locked.
       </p>
       <a href={GUMROAD_URL} style={{
         display: 'inline-block',
@@ -588,7 +588,7 @@ function FooterCTA() {
         textDecoration: 'none',
         letterSpacing: '0.02em',
       }}>
-        Get Founding Access — $49.90 →
+        Get Founding Access — $79.90 →
       </a>
       <p style={{ fontFamily: spaceMono.style.fontFamily, fontSize: '11px', color: colors.textSecondary, marginTop: '20px' }}>
         weightwisehealth.com · Evidence-based human optimization
