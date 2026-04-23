@@ -7,7 +7,7 @@ const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], weight: ['400','500','6
 const inter = Inter({ subsets: ['latin'], weight: ['400','500','600'], variable: '--font-body' })
 const spaceMono = Space_Mono({ subsets: ['latin'], weight: ['400','700'], variable: '--font-mono' })
 
-const GUMROAD_URL = '#' // TODO: substituir pela URL real do Gumroad
+const GUMROAD_URL = 'https://weightwise8.gumroad.com/l/grmohs'
 
 const colors = {
   bg: '#0A0A0F',
