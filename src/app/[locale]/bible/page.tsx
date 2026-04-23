@@ -173,7 +173,7 @@ function Hero() {
         </p>
         <div style={{ width: '80%', height: '3px', background: `linear-gradient(90deg, ${colors.blue}, ${colors.purple})`, borderRadius: '2px' }} />
         <div style={{ fontFamily: spaceMono.style.fontFamily, fontSize: '11px', color: colors.textSecondary, lineHeight: 2 }}>
-          <div>22 Chapters</div>
+          <div>40 Chapters</div>
           <div>4 Appendices</div>
           <div>Evidence-Based Protocols</div>
           <div>Men & Women</div>
@@ -363,7 +363,7 @@ function WhatYouGet() {
         color: colors.textPrimary,
         margin: '0 0 12px',
         textAlign: 'center',
-      }}>22 Chapters. Zero Fluff.</h2>
+      }}>40 Chapters. Zero Fluff.</h2>
       <p style={{
         fontFamily: inter.style.fontFamily,
         fontSize: '16px',
