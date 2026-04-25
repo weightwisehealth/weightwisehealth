@@ -1,13 +1,15 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
+import { Chapter1LeadCapture } from '@/components/Chapter1LeadCapture'
 import { Space_Grotesk, Inter, Space_Mono } from 'next/font/google'
 
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], weight: ['400','500','600','700'], variable: '--font-headline' })
 const inter = Inter({ subsets: ['latin'], weight: ['400','500','600'], variable: '--font-body' })
 const spaceMono = Space_Mono({ subsets: ['latin'], weight: ['400','700'], variable: '--font-mono' })
 
-const GUMROAD_URL = 'https://weightwise8.gumroad.com/l/grmohs'
+
+const GUMROAD_URL = 'https://gumroad.com/l/grmohs'
 
 const colors = {
   bg: '#0A0A0F',
@@ -614,6 +616,7 @@ export default function BiblePage() {
         <PainSection />
         <VSLSection />
         <WhatYouGet />
+        <Chapter1LeadCapture />
         <Pricing />
         <FAQ />
         <FooterCTA />
