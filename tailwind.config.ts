@@ -9,45 +9,39 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: {
-          50: '#eff6ff',
-          100: '#dbeafe',
-          200: '#bfdbfe',
-          300: '#93c5fd',
-          400: '#60a5fa',
-          500: '#3b82f6',
-          600: '#2563eb', // Main primary
-          700: '#1d4ed8',
-          800: '#1e40af',
-          900: '#1e3a8a',
-        },
-        secondary: {
-          50: '#f0fdf4',
-          100: '#dcfce7',
-          200: '#bbf7d0',
-          300: '#86efac',
-          400: '#4ade80',
-          500: '#22c55e',
-          600: '#10b981', // Main secondary
-          700: '#059669',
-          800: '#047857',
-          900: '#065f46',
-        },
-        accent: {
-          50: '#fffbeb',
-          100: '#fef3c7',
-          200: '#fde68a',
-          300: '#fcd34d',
-          400: '#fbbf24',
-          500: '#f59e0b', // Main accent
-          600: '#d97706',
-          700: '#b45309',
-          800: '#92400e',
-          900: '#78350f',
-        }
+        "lab-black": "#0a0e27",
+        "lab-dark": "#1a1f3a",
+        "lab-accent": "#00d9ff",
+        "lab-accent-dark": "#00a8cc",
+        "lab-purple": "#7c3aed",
+        "lab-gold": "#d4af37",
+        "lab-red": "#ff4d00",
+        background: "#0a0e27",
+        foreground: "#f0f4f8",
+        card: "#1a1f3a",
+        "card-foreground": "#f0f4f8",
+        border: "#2a2f4a",
+        input: "#1a1f3a",
+        "muted-foreground": "#4b5563",
+        popover: "#1a1f3a",
+        "popover-foreground": "#f0f4f8",
+        accent: "#00d9ff",
+        "accent-foreground": "#0a0e27",
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ["Inter", "sans-serif"],
+        display: ["Sora", "sans-serif"],
+        mono: ["Fira Code", "monospace"],
+      },
+      boxShadow: {
+        "glow-cyan": "0 0 20px rgba(0, 217, 255, 0.3)",
+        "glow-purple": "0 0 20px rgba(124, 58, 237, 0.3)",
+      },
+      backgroundImage: {
+        "gradient-dark": "linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%)",
+      },
+      animation: {
+        pulse: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       },
     },
   },

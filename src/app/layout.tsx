@@ -1,13 +1,19 @@
-import {locales} from '@/i18n';
+import type { Metadata } from 'next';
+import './globals.css';
 
-export function generateStaticParams() {
-  return locales.map((locale) => ({locale}));
-}
+export const metadata: Metadata = {
+  title: 'WeightWise Health | Elite Optimization Protocol',
+  description: 'Scientific protocol for advanced hormonal optimization.',
+};
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  );
 }
