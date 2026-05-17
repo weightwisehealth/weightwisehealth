@@ -1,22 +1,26 @@
 import type { Metadata } from 'next';
-import "./globals.css";
+import { notFound } from 'next/navigation';
+import { getTranslations } from 'next-intl/server';
+import './globals.css';
+
+const locales = ['pt-BR', 'en', 'es', 'fr', 'de', 'it', 'ja'];
 
 export const metadata: Metadata = {
   title: 'WeightWise Health',
-  description: 'The first global system where the human is the laboratory',
 };
 
 export default function RootLayout({
   children,
+  params: { locale },
 }: {
   children: React.ReactNode;
+  params: { locale: string };
 }) {
+  if (!locales.includes(locale as any)) notFound();
+
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head />
-      <body>
-        {children}
-      </body>
+    <html lang={locale}>
+      <body>{children}</body>
     </html>
   );
 }
