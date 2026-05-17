@@ -1,0 +1,80 @@
+{
+  "hero": {
+    "title": "Otimização Hormonal de Elite",
+    "subtitle": "Protocolo científico para biohacking avançado. Testosterone, Cortisol, Insulin otimizados.",
+    "cta": "Acessar Protocolo",
+    "ctaSecondary": "Saiba Mais",
+    "spotLabel": "Vagas Premium"
+  },
+  "features": {
+    "title": "Análise Hormonal Completa",
+    "subtitle": "Dados em tempo real de seus biomarcadores críticos",
+    "items": [
+      {
+        "id": "testosterone",
+        "icon": "⚡",
+        "title": "Testosterone Otimizado",
+        "description": "Protocolos comprovados para elevar T natural. Monitoramento contínuo com IA.",
+        "metric": "+47%",
+        "metricLabel": "Aumento médio em 90 dias"
+      },
+      {
+        "id": "cortisol",
+        "icon": "🧠",
+        "title": "Cortisol Controlado",
+        "description": "Redução de stress crônico. Sono profundo restaurado.",
+        "metric": "-62%",
+        "metricLabel": "Redução de cortisol noturno"
+      },
+      {
+        "id": "insulin",
+        "icon": "🎯",
+        "title": "Sensibilidade Insulínica",
+        "description": "Metabolismo otimizado. Gordura corporal reduzida.",
+        "metric": "-38%",
+        "metricLabel": "Melhora na sensibilidade"
+      }
+    ]
+  },
+  "builtFor": {
+    "title": "Construído Para Quem?",
+    "subtitle": "Elite de biohackers que não aceitam mediocridade",
+    "items": [
+      {
+        "id": "entrepreneurs",
+        "icon": "🚀",
+        "title": "Empreendedores de Alto Desempenho",
+        "description": "Maximize energia mental e física. Tome decisões melhores com hormônios otimizados."
+      },
+      {
+        "id": "athletes",
+        "icon": "💪",
+        "title": "Atletas Profissionais",
+        "description": "Performance máxima dentro de regulações. Recuperação acelerada."
+      },
+      {
+        "id": "investors",
+        "icon": "💰",
+        "title": "Investidores & CEOs",
+        "description": "Longevidade comprovada. Foco e clareza mental para decisões de bilhões."
+      },
+      {
+        "id": "biohackers",
+        "icon": "🔬",
+        "title": "Biohackers Avançados",
+        "description": "Dados científicos. Sem pseudociência. Protocolos baseados em evidências."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Pronto para Otimizar?",
+    "description": "Apenas 47 vagas disponíveis. Primeira consulta diagnóstica gratuita.",
+    "button": "Reservar Vaga Agora"
+  },
+  "nav": {
+    "home": "Início",
+    "about": "Sobre",
+    "services": "Serviços",
+    "contact": "Contato"
+  }
+}

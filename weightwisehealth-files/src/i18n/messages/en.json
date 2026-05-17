@@ -1,0 +1,80 @@
+{
+  "hero": {
+    "title": "Elite Hormonal Optimization",
+    "subtitle": "Scientific protocol for advanced biohacking. Testosterone, Cortisol, Insulin optimized.",
+    "cta": "Access Protocol",
+    "ctaSecondary": "Learn More",
+    "spotLabel": "Premium Spots"
+  },
+  "features": {
+    "title": "Complete Hormonal Analysis",
+    "subtitle": "Real-time data on your critical biomarkers",
+    "items": [
+      {
+        "id": "testosterone",
+        "icon": "⚡",
+        "title": "Optimized Testosterone",
+        "description": "Proven protocols to naturally elevate T. Continuous AI monitoring.",
+        "metric": "+47%",
+        "metricLabel": "Average increase in 90 days"
+      },
+      {
+        "id": "cortisol",
+        "icon": "🧠",
+        "title": "Controlled Cortisol",
+        "description": "Chronic stress reduction. Deep sleep restored.",
+        "metric": "-62%",
+        "metricLabel": "Nighttime cortisol reduction"
+      },
+      {
+        "id": "insulin",
+        "icon": "🎯",
+        "title": "Insulin Sensitivity",
+        "description": "Optimized metabolism. Body fat reduced.",
+        "metric": "-38%",
+        "metricLabel": "Sensitivity improvement"
+      }
+    ]
+  },
+  "builtFor": {
+    "title": "Built For Who?",
+    "subtitle": "Elite biohackers who don't accept mediocrity",
+    "items": [
+      {
+        "id": "entrepreneurs",
+        "icon": "🚀",
+        "title": "High-Performance Entrepreneurs",
+        "description": "Maximize mental and physical energy. Make better decisions with optimized hormones."
+      },
+      {
+        "id": "athletes",
+        "icon": "💪",
+        "title": "Professional Athletes",
+        "description": "Maximum performance within regulations. Accelerated recovery."
+      },
+      {
+        "id": "investors",
+        "icon": "💰",
+        "title": "Investors & CEOs",
+        "description": "Proven longevity. Mental clarity and focus for billion-dollar decisions."
+      },
+      {
+        "id": "biohackers",
+        "icon": "🔬",
+        "title": "Advanced Biohackers",
+        "description": "Scientific data. No pseudoscience. Evidence-based protocols."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Optimize?",
+    "description": "Only 47 spots available. First diagnostic consultation free.",
+    "button": "Book Spot Now"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact"
+  }
+}

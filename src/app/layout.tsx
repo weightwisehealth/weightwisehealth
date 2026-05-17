@@ -1,13 +1,18 @@
-import {locales} from '@/i18n';
-
-export function generateStaticParams() {
-  return locales.map((locale) => ({locale}));
-}
+export const metadata = {
+  title: 'WeightWise Health',
+  description: 'Optimize your hormones',
+};
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return (
+    <html>
+      <body>
+        {children}
+      </body>
+    </html>
+  );
 }
