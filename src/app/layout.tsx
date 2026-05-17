@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
-import './globals.css';
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: 'WeightWise Health | Elite Optimization Protocol',
-  description: 'Scientific protocol for advanced hormonal optimization.',
+  title: 'WeightWise Health',
+  description: 'The first global system where the human is the laboratory',
 };
 
 export default function RootLayout({
@@ -12,8 +12,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <head />
+      <body>
+        {children}
+      </body>
     </html>
   );
 }
