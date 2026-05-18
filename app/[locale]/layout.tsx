@@ -1,4 +1,9 @@
-import type { ReactNode } from 'react';
+import type { Metadata, ReactNode } from 'react';
+
+export const metadata: Metadata = {
+  title: 'WeightWise Health',
+  description: 'O primeiro sistema global onde o humano é o laboratório',
+};
 
 interface LayoutProps {
   children: ReactNode;
