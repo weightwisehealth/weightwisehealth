@@ -1,28 +1,17 @@
-import { ReactNode } from 'react';
-import { getMessages } from 'next-intl/server';
-import { NextIntlClientProvider } from 'next-intl';
+import type { ReactNode } from 'react';
 
-interface Props {
+interface LayoutProps {
   children: ReactNode;
   params: {
     locale: string;
   };
 }
 
-export const metadata = {
-  title: 'WeightWise Health',
-  description: 'O primeiro sistema global onde o humano é o laboratório',
-};
-
-export default async function LocaleLayout({ children, params }: Props) {
-  const messages = await getMessages();
-
+export default function LocaleLayout({ children, params }: LayoutProps) {
   return (
     <html lang={params.locale}>
       <body>
-        <NextIntlClientProvider messages={messages}>
-          {children}
-        </NextIntlClientProvider>
+        {children}
       </body>
     </html>
   );
