@@ -1,4 +1,8 @@
-export default function Home() {
+import { useTranslations } from 'next-intl';
+
+export default function HomePage() {
+  const t = useTranslations();
+
   return (
     <main>
       <h1>WeightWise Health</h1>
