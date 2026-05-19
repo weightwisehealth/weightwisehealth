@@ -1,9 +1,13 @@
 'use client';
-
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import { useTranslations } from 'next-intl';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function Home() {
+  const t = useTranslations();
+  const pathname = usePathname();
   const [spotsRemaining, setSpotsRemaining] = useState(47);
 
   useEffect(() => {
@@ -26,6 +30,22 @@ export default function Home() {
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
 
+  const languages = [
+    { code: 'en', label: 'EN' },
+    { code: 'pt', label: 'PT' },
+    { code: 'es', label: 'ES' },
+    { code: 'fr', label: 'FR' },
+    { code: 'de', label: 'DE' },
+    { code: 'it', label: 'IT' },
+    { code: 'ru', label: 'RU' },
+  ];
+
+  const currentLang = pathname.split('/')[1] || 'en';
+
+  const getLocalizedPath = (lang: string) => {
+    return `/${lang}`;
+  };
+
   return (
     <div className="min-h-screen bg-[#0a0e27] text-white">
       {/* Navigation */}
@@ -43,23 +63,32 @@ export default function Home() {
             WeightWise Health
           </motion.h1>
           <div className="hidden md:flex gap-8">
-            {['Home', 'Blog', 'Products', 'About'].map((item) => (
+            {['home', 'blog', 'products', 'about'].map((item) => (
               <motion.a
                 key={item}
                 href="#"
                 whileHover={{ color: '#00d9ff' }}
-                className="text-gray-300 hover:text-[#00d9ff] transition-colors"
+                className="text-gray-300 hover:text-[#00d9ff] transition-colors capitalize"
               >
-                {item}
-              </motion.a>
+                {t(`nav.${item}`)}
+              <              <        ))}
+          </div>
+          <div className="flex gap-2">
+            {languages.map((lang) => (
+              <Link key={lang.code} href={getLocalizedPath(lang.code)}>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  className={`px-3 py-2 rounded text-sm font-semibold transition-all ${
+                    currentLang === lang.code
+                      ? 'bg-[#00d9ff]/20 border border-[#00d9ff] text-[#00d9ff]'
+                      : 'border border-[#00d9ff]/30 text-gray-300 hover:border-[#00d9ff]'
+                  }`}
+                >
+                  {lang.label}
+                </motion.button>
+              </Link>
             ))}
           </div>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            className="px-4 py-2 border border-[#00d9ff]/50 text-[#00d9ff] rounded hover:bg-[#00d9ff]/10 transition-colors"
-          >
-            EN
-          </motion.button>
         </div>
       </motion.nav>
 
@@ -73,53 +102,49 @@ export default function Home() {
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#00d9ff] opacity-5 rounded-full blur-3xl" />
         </div>
-
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           className="inline-block mb-6 px-4 py-2 bg-[#00d9ff]/10 border border-[#00d9ff]/30 rounded-full relative z-10"
         >
-          <span className="text-[#00d9ff] text-sm font-semibold uppercase tracking-wider">Founding Access — 100 Spots Only</span>
+          <span className="text-[#00d9ff] text-sm font-semibold uppercase tracking-wider">
+            {t('hero.badge')}
+          </span>
         </motion.div>
-
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-7xl md:text-8xl font-black mb-6 leading-tight relative z-10"
         >
-          <span className="text-white">The Optimization</span>
-          <span className="bg-gradient-to-r from-[#00d9ff] to-[#7c3aed] bg-clip-text text-transparent"> Bible</span>
+          <span className="text-white">{t('hero.title')}</span>
         </motion.h2>
-
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
           className="text-xl md:text-2xl text-gray-300 mb-8 italic max-w-3xl mx-auto relative z-10"
         >
-          "You are about to see your body in a way you will <span className="font-bold text-white">never be able to unsee.</span>"
+          {t('hero.subtitle')}
         </motion.p>
-
         <motion.button
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="bg-gradient-to-r from-[#ff6600] to-[#ff8533] hover:shadow-lg hover:shadow-[#ff6600]/50 text-white font-bold py-4 px-12 rounded-lg text-lg transition-all duration-300 mb-6 relative z-10"
+          className="bg-gradient-to-r from-[#ff6600] to-[#ff8533] hover:shadow-lg hover:shadow-[#ff6600]/50 text-white font-bold py-4 px-12 rounded-lg text-lg transition-all duration-300 relative z-10"
         >
-          Get Founding Access — $79.90
+          {t('hero.cta')}
         </motion.button>
-
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="text-sm text-gray-400 uppercase tracking-wider relative z-10"
+          className="text-xs text-gray-500 mt-6 uppercase tracking-wider relative z-10"
         >
-          Price Becomes $129.90 After 100 Buyers · No Countdown Trick
+          {t('hero.note')}
         </motion.p>
       </motion.section>
 
@@ -129,134 +154,95 @@ export default function Home() {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="py-20 px-6 bg-[#0f132a]/50 relative overflow-hidden"
+        className="py-20 px-6"
       >
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            <h3 className="text-3xl font-bold text-[#00d9ff] mb-8 uppercase">What This Is</h3>
-            <motion.ul className="space-y-4 text-gray-300">
-              {[
-                'The first system where YOU are the laboratory',
-                'A movement — not a product',
-                '40 chapters of applied biology for any human body',
-                'Education built on real PubMed citations',
-              ].map((item, i) => (
-                <motion.li key={i} variants={itemVariants} className="flex gap-3">
-                  <span className="text-[#00ff88] font-bold">✓</span>
-                  <span>{item}</span>
-                </motion.li>
-              ))}
-            </motion.ul>
-          </motion.div>
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12">
+            {/* What This Is */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-2xl font-bold text-[#00d9ff] mb-8 uppercase">
+                {t('whatIs.title')}
+              </h3>
+              <motion.div className="space-y-4" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+                {[0, 1, 2, 3].map((i) => (
+                  <motion.div key={i} variants={itemVariants} className="flex gap-4">
+                    <span className="text-[#00ff88] text-</span>2xl">
+                    <p className="text-gray-300">{t(`whatIs.items.${i}`)}</p>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </motion.div>
 
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            <h3 className="text-3xl font-bold text-[#ff6600] mb-8 uppercase">What This Is Not</h3>
-            <motion.ul className="space-y-4 text-gray-300">
-              {[
-                'Another biohacking guide',
-                'A competitor to Huberman or Examine.com',
-                'A product that starts with the compound',
-                'A men-only manual',
-                'A $49 blog post in PDF form',
-              ].map((item, i) => (
-                <motion.li key={i} variants={itemVariants} className="flex gap-3">
-                  <span className="text-[#ff6600] font-bold">✕</span>
-                  <span>{item}</span>
-                </motion.li>
-              ))}
-            </motion.ul>
+            {/* What This Is Not */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-2xl font-bold text-[#ff6600] mb-8 uppercase">
+                {t('whatIsNot.title')}
+              </h3>
+              <motion.div className="space-y-4" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+                {[0, 1, 2, 3].map((i) => (
+                  <motion.div key={i} variants={itemVariants} className="flex gap-4">
+                    <span className="text-[#ff6600] text-</span>2xl">
+                    <p className="text-gray-300">{t(`whatIsNot.items.${i}`)}</p>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </motion.div>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Who       {/* Who }
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="py-20 px-6 bg-[#0f132a]/30"
+      >
+        <div className="max-w-4xl mx-auto text-center">
+          <h3 className="text-4xl font-bold mb-4">{t('whoFor.title')}</h3>
+          <p className="text-xl text-gray-300 mb-12">{t('whoFor.subtitle')}</p>
+          <motion.div className="space-y-6" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+            {[0, 1, 2].map((i) => (
+              <motion.div
+                key={i}
+                variants={itemVariants}
+                className="bg-[#0f132a]/50 border border-[#00d9ff]/20 rounded-lg p-8 hover:border-[#00d9ff]/50 transition-colors"
+              >
+                <span className="text-4xl font-black text-[#00d9ff]/30">{23 + i * 19}</span>
+                <p className="text-gray-300 mt-4">{t(`whoFor.items.${i}`)}</p>
+              </motion.div>
+            ))}
           </motion.div>
         </div>
       </motion.section>
 
-      {/* Who This Is For */}
+      {/* Architecture */}
       <motion.section
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-        className="py-20 px-6 text-center"
-      >
-        <h3 className="text-4xl font-bold mb-4">WHO THIS IS FOR</h3>
-        <p className="text-xl text-gray-300 mb-12">
-          <span className="text-[#00d9ff] font-bold">The filter is your symptom.</span> Not your age. Not your gender.
-        </p>
-
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="max-w-4xl mx-auto bg-[#0f132a]/50 border border-[#00d9ff]/20 rounded-lg p-8"
-        >
-          <motion.ul className="space-y-4 text-gray-300 text-lg">
-            {[
-              'You feel like you should have more energy than this.',
-              "You're doing everything right and still feel like you're running below capacity.",
-              "You're not ready to accept that decline is mandatory.",
-            ].map((item, i) => (
-              <motion.li key={i} variants={itemVariants}>
-                • {item}
-              </motion.li>
-            ))}
-          </motion.ul>
-        </motion.div>
-      </motion.section>
-
-      {/* The Architecture */}
-      <motion.section
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-        className="py-20 px-6 bg-[#0f132a]/50"
-      >
-        <div className="max-w-6xl mx-auto">
-          <h3 className="text-4xl font-bold text-center mb-4">THE ARCHITECTURE</h3>
-          <p className="text-center text-gray-300 mb-12 text-lg">3 layers. Only one competitor has attempted the first.</p>
-
-          <motion.div
-            className="grid md:grid-cols-3 gap-8"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            {[
-              {
-                title: 'THE KNOWLEDGE',
-                subtitle: 'What everyone tries to have',
-                desc: 'Hormones, peptides, body composition. A solid scientific foundation backed by real PubMed citations.',
-              },
-              {
-                title: 'THE SYSTEM',
-                subtitle: 'What nobody delivers',
-                desc: 'Calculators, decision tables, objective-based protocols. You input your real data — you get a real direction.',
-              },
-              {
-                title: 'THE UPDATE',
-                subtitle: 'Impossible to copy',
-                desc: 'Quarterly updates exclusive to verified buyers. The pirated PDF ages. Your copy never does.',
-              },
-            ].map((item, i) => (
+        viewport={{         viewport={{         viewport={{         viewport={{         vieName="max-w-4xl mx-auto">
+          <h3 className="text-4xl font-bold text-center mb-12">{t('architecture.title')}</h3>
+          <motion.div className="space-y-6" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+            {['knowledge', 'system', 'update'].map((key) => (
               <motion.div
-                key={i}
+                key={key}
                 variants={itemVariants}
-                className="bg-[#0a0e27] border border-[#00d9ff]/20 rounded-lg p-8 hover:border-[#00d9ff]/50 transition-colors"
+                className="bg-[#0f132a]/50 border border-[#00d9ff]/20 rounded-lg p-8 hover:border-[#00d9ff]/50 transition-colors"
               >
-                <h4 className="text-lg font-bold text-[#00d9ff] mb-2">{item.title}</h4>
-                <p className="text-sm text-gray-400 mb-4">{item.subtitle}</p>
-                <p className="text-gray-300">{item.desc}</p>
+                <h4 className="text-lg font-bold text-[#00d9ff] mb-2">{t(`architecture.${key}.title`)}</h4>
+                <p className="text-gray-300">{t(`architecture.${key}.desc`)}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -269,38 +255,20 @@ export default function Home() {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="py-20 px-6"
+        className="py-20 px-6 bg-[#0f132a]/30"
       >
         <div className="max-w-6xl mx-auto">
-          <h3 className="text-4xl font-bold text-center mb-4">WHAT'S INSIDE</h3>
-          <p className="text-center text-gray-300 mb-12 text-lg">40 chapters. 4 blocks. One complete system.</p>
-
-          <motion.div
-            className="grid md:grid-cols-2 gap-8"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            {[
-              { num: '01', title: 'FOUNDATION', desc: "You don't know your own body", chapters: '10 CHAPTERS' },
-              { num: '02', title: 'HORMONAL SYSTEM', desc: 'The instruments of the laboratory', chapters: '10 CHAPTERS' },
-              { num: '03', title: 'PEPTIDES & FULL SPECTRUM', desc: "The frontier medicine hasn't delivered yet", chapters: '10 CHAPTERS' },
-              { num: '04', title: 'PERSONALIZED PROTOCOL', desc: 'You are the scientist of your laboratory', chapters: '10 CHAPTERS' },
-            ].map((item, i) => (
+          <h3 className="text-4xl font-bold text-center mb-4">{t('inside.title')}</h3>
+          <p className="text-center text-gray-400 mb-12">{t('inside.subtitle')}</p>
+          <motion.div clas          <motion.div cs-2 gap-6" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+            {['foundation', 'hormonal', 'peptides', 'protocol'].map((key) => (
               <motion.div
-                key={i}
+                key={key}
                 variants={itemVariants}
-                className="bg-[#0f132a]/50 border border-[#00d9ff]/20 rounded-lg p-8 hover:border-[#00d9ff]/50 transition-colors"
+                className="bg-[#0a0e27]/50 border border-[#00d9ff]/20 rounded-lg p-8 hover:border-[#00d9ff]/50 transition-colors"
               >
-                <div className="flex items-start gap-4 mb-4">
-                  <span className="text-4xl font-black text-[#00d9ff]/30">{item.num}</span>
-                  <div>
-                    <h4 className="text-lg font-bold text-[#00d9ff]">{item.title}</h4>
-                    <p className="text-gray-400 text-sm">{item.desc}</p>
-                  </div>
-                </div>
-                <p className="text-[#7c3aed] font-semibold text-sm">{item.chapters}</p>
+                <h4 className="text-lg font-bold text-[#00d9ff] mb-2">{t(`inside.${key}.t                             <p className="text-gray-300 mb-4">{t(`inside.${key}.desc`)}</p>
+                <p className="text-[#7c3aed] font-semibold text-sm">{t(`inside.${key}.chapters`)}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -315,9 +283,8 @@ export default function Home() {
         viewport={{ once: true }}
         className="py-20 px-6 bg-gradient-to-b from-[#00d9ff]/10 to-[#0a0e27]/50 text-center"
       >
-        <h3 className="text-4xl font-bold mb-4">FOUNDING ACCESS</h3>
+        <h3 className="text-4xl font-bold mb-4 uppercase">Founding Access</h3>
         <p className="text-xl text-gray-300 mb-8">First 100 buyers. Founding price. Forever.</p>
-
         <motion.div
           initial={{ scale: 0.9, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
@@ -328,18 +295,16 @@ export default function Home() {
           <p className="text-gray-300 mb-6">
             The price is <span className="text-[#00d9ff] font-bold">$79.90</span> now. After the first 100 buyers, it becomes <span className="text-[#ff6600] font-bold">$129.90</span> permanently.
           </p>
-          <p className="text-gray-400 text-sm">There is no countdown. The number of buyers is the only gate. Real urgency — no tricks.</p>
+          <p className="text-gray-400 text-sm">There is no countdown. The number of buyers is the only gate. Real  no tricks.</p>urgency 
         </motion.div>
-
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="bg-gradient-to-r from-[#ff6600] to-[#ff8533] hover:shadow-lg hover:shadow-[#ff6600]/50 text-white font-bold py-4 px-12 rounded-lg text-lg transition-all duration-300"
         >
-          Get Founding Access — $79.90
+          Get Founding  $79.90Access 
         </motion.button>
-
-        <p className="text-xs text-gray-500 mt-6 uppercase tracking-wider">Secure Checkout via Gumroad · Instant PDF Delivery</p>
+        <p className="text-xs text-gray-500 mt-6 uppercase tracking-wider">Secure Checkout via        Instant PDF Delivery</p>Gumroad 
       </motion.section>
 
       {/* FAQ */}
@@ -351,8 +316,7 @@ export default function Home() {
         className="py-20 px-6"
       >
         <div className="max-w-4xl mx-auto">
-          <h3 className="text-4xl font-bold text-center mb-12">COMMON QUESTIONS</h3>
-
+          <h3 className="text-4xl font-bold text-center mb-12">Common Questions</h3>
           <motion.div
             className="space-y-4"
             variants={containerVariants}
@@ -388,11 +352,13 @@ export default function Home() {
         viewport={{ once: true }}
         className="py-12 px-6 border-t border-[#00d9ff]/20 text-center text-gray-400"
       >
-        <p>© 2026 WeightWise Health. All rights reserved.</p>
+        < 2026 WeightWise Health. All rights reserved.</p>p>
         <div className="mt-4 flex justify-center gap-6 text-sm">
-          {['Privacy Policy', 'Terms of Service', 'Contact'].map((item) => (
+          {['privacy', 'terms', 'contact'].map((item) => (
             <motion.a key={item} href="#" whileHover={{ color: '#00d9ff' }} className="hover:text-[#00d9ff] transition-colors">
-              {item}
+              {item === 'privacy' && 'Privacy Policy'}
+              {item === 'terms' && 'Terms of Service'}
+              {item === 'contact' && 'Contact'}
             </motion.a>
           ))}
         </div>
