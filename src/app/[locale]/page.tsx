@@ -42,12 +42,12 @@ export default function Home() {
 
   const currentLang = pathname.split('/')[1] || 'en';
 
-  const getLocalizedPath = (lang: string) => {
-    return `/${lang}`;
+  const handleGumroad = () => {
+    window.location.href = 'https://weightwise8.gumroad.com/l/grmohs';
   };
 
   return (
-    <div className="min-h-screen bg-[#0a0e27] text-white">
+    <div className="min-h-screen bg-[#0a0e27] text-white font-sans">
       <motion.nav
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -57,12 +57,12 @@ export default function Home() {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <motion.h1
             whileHover={{ scale: 1.05 }}
-            className="text-2xl font-bold bg-gradient-to-r from-[#00d9ff] to-[#7c3aed] bg-clip-text text-transparent cursor-pointer"
+            className="text-2xl font-bold bg-gradient-to-r from-[#00d9ff] to-[#7c3aed] bg-clip-text text-transparent cursor-pointer font-sora"
           >
             WeightWise Health
           </motion.h1>
           <div className="hidden md:flex gap-8">
-            {['home', 'blog', 'products', 'about'].map((item) => (
+            {['home', 'blog', 'products', 'about'].map((item ) => (
               <motion.a
                 key={item}
                 href="#"
@@ -75,7 +75,7 @@ export default function Home() {
           </div>
           <div className="flex gap-2">
             {languages.map((lang) => (
-              <Link key={lang.code} href={getLocalizedPath(lang.code)}>
+              <Link key={lang.code} href={`/${lang.code}`}>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   className={`px-3 py-2 rounded text-sm font-semibold transition-all ${
@@ -115,7 +115,7 @@ export default function Home() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-7xl md:text-8xl font-black mb-6 leading-tight relative z-10"
+          className="text-7xl md:text-8xl font-black mb-6 leading-tight relative z-10 font-sora"
         >
           <span className="text-white">{t('hero.title')}</span>
         </motion.h2>
@@ -133,7 +133,8 @@ export default function Home() {
           transition={{ duration: 0.8, delay: 0.4 }}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          onClick={() => window.location.href = "https://weightwise8.gumroad.com/l/grmohs"} className="bg-gradient-to-r from-[#ff6600] to-[#ff8533] hover:shadow-lg hover:shadow-[#ff6600]/50 text-white font-bold py-4 px-12 rounded-lg text-lg transition-all duration-300 relative z-10"
+          onClick={handleGumroad}
+          className="bg-gradient-to-r from-[#ff6600] to-[#ff8533] hover:shadow-lg hover:shadow-[#ff6600]/50 text-white font-bold py-4 px-12 rounded-lg text-lg transition-all duration-300 relative z-10 cursor-pointer"
         >
           {t('hero.cta')}
         </motion.button>
@@ -162,7 +163,7 @@ export default function Home() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-2xl font-bold text-[#00d9ff] mb-8 uppercase">
+              <h3 className="text-2xl font-bold text-[#00d9ff] mb-8 uppercase font-sora">
                 {t('whatIs.title')}
               </h3>
               <motion.div className="space-y-4" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
@@ -181,7 +182,7 @@ export default function Home() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-2xl font-bold text-[#ff6600] mb-8 uppercase">
+              <h3 className="text-2xl font-bold text-[#ff6600] mb-8 uppercase font-sora">
                 {t('whatIsNot.title')}
               </h3>
               <motion.div className="space-y-4" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
@@ -205,7 +206,7 @@ export default function Home() {
         className="py-20 px-6 bg-[#0f132a]/30"
       >
         <div className="max-w-4xl mx-auto text-center">
-          <h3 className="text-4xl font-bold mb-4">{t('whoFor.title')}</h3>
+          <h3 className="text-4xl font-bold mb-4 font-sora">{t('whoFor.title')}</h3>
           <p className="text-xl text-gray-300 mb-12">{t('whoFor.subtitle')}</p>
           <motion.div className="space-y-6" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             {[0, 1, 2].map((i) => (
@@ -230,7 +231,7 @@ export default function Home() {
         className="py-20 px-6"
       >
         <div className="max-w-4xl mx-auto">
-          <h3 className="text-4xl font-bold text-center mb-12">{t('architecture.title')}</h3>
+          <h3 className="text-4xl font-bold text-center mb-12 font-sora">{t('architecture.title')}</h3>
           <motion.div className="space-y-6" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             {['knowledge', 'system', 'update'].map((key) => (
               <motion.div
@@ -254,7 +255,7 @@ export default function Home() {
         className="py-20 px-6 bg-[#0f132a]/30"
       >
         <div className="max-w-6xl mx-auto">
-          <h3 className="text-4xl font-bold text-center mb-4">{t('inside.title')}</h3>
+          <h3 className="text-4xl font-bold text-center mb-4 font-sora">{t('inside.title')}</h3>
           <p className="text-center text-gray-400 mb-12">{t('inside.subtitle')}</p>
           <motion.div className="grid md:grid-cols-2 gap-6" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             {['foundation', 'hormonal', 'peptides', 'protocol'].map((key) => (
@@ -279,7 +280,7 @@ export default function Home() {
         viewport={{ once: true }}
         className="py-20 px-6 bg-gradient-to-b from-[#00d9ff]/10 to-[#0a0e27]/50 text-center"
       >
-        <h3 className="text-4xl font-bold mb-4 uppercase">Founding Access</h3>
+        <h3 className="text-4xl font-bold mb-4 uppercase font-sora">Founding Access</h3>
         <p className="text-xl text-gray-300 mb-8">First 100 buyers. Founding price. Forever.</p>
         <motion.div
           initial={{ scale: 0.9, opacity: 0 }}
@@ -296,7 +297,8 @@ export default function Home() {
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          onClick={() => window.location.href = "https://weightwise8.gumroad.com/l/grmohs"} onClick={() => window.location.href = "https://weightwise8.gumroad.com/l/grmohs"} className="bg-gradient-to-r from-[#ff6600] to-[#ff8533] hover:shadow-lg hover:shadow-[#ff6600]/50 text-white font-bold py-4 px-12 rounded-lg text-lg transition-all duration-300 cursor-pointer"
+          onClick={handleGumroad}
+          className="bg-gradient-to-r from-[#ff6600] to-[#ff8533] hover:shadow-lg hover:shadow-[#ff6600]/50 text-white font-bold py-4 px-12 rounded-lg text-lg transition-all duration-300 cursor-pointer"
         >
           Get Founding Access — $79.90
         </motion.button>
@@ -311,7 +313,7 @@ export default function Home() {
         className="py-20 px-6"
       >
         <div className="max-w-4xl mx-auto">
-          <h3 className="text-4xl font-bold text-center mb-12">Common Questions</h3>
+          <h3 className="text-4xl font-bold text-center mb-12 font-sora">Common Questions</h3>
           <motion.div
             className="space-y-4"
             variants={containerVariants}
