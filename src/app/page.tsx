@@ -47,7 +47,7 @@ export default function Home() {
           <span className="text-[#00d9ff] text-sm font-semibold">📊 4.9★ from 1,200+ Verified Buyers</span>
         </motion.div>
 
-        <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="text-7xl md:text-8xl font-black mb-6 leading-tight relative z-10 font-sora"><span className="text-white">The Optimization</span> <span className="text-[#00d9ff]">Bible</span></motion.h2>
+        <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="text-7xl md:text-8xl font-black mb-6 leading-tight relative z-10 font-sora"><span className="text-white">THE OPTIMIZATION</span> <span className="text-[#00d9ff]">Bible</span></motion.h2>
         
         <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.25 }} className="text-xl md:text-2xl text-gray-300 mb-8 italic max-w-3xl mx-auto relative z-10">"You are about to see your body in a way you will <span className="font-bold">never be able to unsee.</span>"</motion.p>
 
@@ -158,7 +158,7 @@ export default function Home() {
           <div className="bg-[#0a0e27]/50 rounded p-4 mb-6">
             <p className="text-gray-300 text-sm mb-2">WHAT IS INCLUDED:</p>
             <ul className="text-left text-gray-400 text-sm space-y-2">
-              <li>✓ The Optimization Bible (40-chapter PDF)</li>
+              <li>✓ THE OPTIMIZATION Bible (40-chapter PDF)</li>
               <li>✓ Quarterly updates (your copy never ages)</li>
               <li>✓ Founding member status (locked at $79.90)</li>
               <li>✓ Every citation is a real PubMed PMID</li>
