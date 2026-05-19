@@ -67,3 +67,4 @@ npm run dev
 ## License
 
 © 2026 WeightWise Health. All rights reserved.
+# Force rebuild ter 19 mai 2026 10:30:56 -03
