@@ -8,27 +8,6 @@ import { usePathname } from 'next/navigation';
 export default function Home() {
   const t = useTranslations();
   const pathname = usePathname();
-  const [spotsRemaining, setSpotsRemaining] = useState(47);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setSpotsRemaining((prev) => Math.max(0, prev - Math.floor(Math.random() * 2)));
-    }, 15000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.1, delayChildren: 0.2 },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  };
 
   const languages = [
     { code: 'en', label: 'EN' },
@@ -166,9 +145,9 @@ export default function Home() {
               <h3 className="text-2xl font-bold text-[#00d9ff] mb-8 uppercase font-sora">
                 {t('whatIs.title')}
               </h3>
-              <motion.div className="space-y-4" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+              <motion.div className="space-y-4">
                 {[0, 1, 2, 3].map((i) => (
-                  <motion.div key={i} variants={itemVariants} className="flex gap-4">
+                  <motion.div key={i} className="flex gap-4">
                     <span className="text-[#00ff88] text-2xl flex-shrink-0">✓</span>
                     <p className="text-gray-300">{t(`whatIs.items.${i}`)}</p>
                   </motion.div>
@@ -185,9 +164,9 @@ export default function Home() {
               <h3 className="text-2xl font-bold text-[#ff6600] mb-8 uppercase font-sora">
                 {t('whatIsNot.title')}
               </h3>
-              <motion.div className="space-y-4" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+              <motion.div className="space-y-4">
                 {[0, 1, 2, 3].map((i) => (
-                  <motion.div key={i} variants={itemVariants} className="flex gap-4">
+                  <motion.div key={i} className="flex gap-4">
                     <span className="text-[#ff6600] text-2xl flex-shrink-0">✕</span>
                     <p className="text-gray-300">{t(`whatIsNot.items.${i}`)}</p>
                   </motion.div>
@@ -208,11 +187,10 @@ export default function Home() {
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-4xl font-bold mb-4 font-sora">{t('whoFor.title')}</h3>
           <p className="text-xl text-gray-300 mb-12">{t('whoFor.subtitle')}</p>
-          <motion.div className="space-y-6" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+          <motion.div className="space-y-6">
             {[0, 1, 2].map((i) => (
               <motion.div
                 key={i}
-                variants={itemVariants}
                 className="bg-[#0f132a]/50 border border-[#00d9ff]/20 rounded-lg p-8 hover:border-[#00d9ff]/50 transition-colors"
               >
                 <span className="text-4xl font-black text-[#00d9ff]/30">{23 + i * 19}</span>
@@ -232,11 +210,10 @@ export default function Home() {
       >
         <div className="max-w-4xl mx-auto">
           <h3 className="text-4xl font-bold text-center mb-12 font-sora">{t('architecture.title')}</h3>
-          <motion.div className="space-y-6" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+          <motion.div className="space-y-6">
             {['knowledge', 'system', 'update'].map((key) => (
               <motion.div
                 key={key}
-                variants={itemVariants}
                 className="bg-[#0f132a]/50 border border-[#00d9ff]/20 rounded-lg p-8 hover:border-[#00d9ff]/50 transition-colors"
               >
                 <h4 className="text-lg font-bold text-[#00d9ff] mb-2">{t(`architecture.${key}.title`)}</h4>
@@ -257,11 +234,10 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <h3 className="text-4xl font-bold text-center mb-4 font-sora">{t('inside.title')}</h3>
           <p className="text-center text-gray-400 mb-12">{t('inside.subtitle')}</p>
-          <motion.div className="grid md:grid-cols-2 gap-6" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+          <motion.div className="grid md:grid-cols-2 gap-6">
             {['foundation', 'hormonal', 'peptides', 'protocol'].map((key) => (
               <motion.div
                 key={key}
-                variants={itemVariants}
                 className="bg-[#0a0e27]/50 border border-[#00d9ff]/20 rounded-lg p-8 hover:border-[#00d9ff]/50 transition-colors"
               >
                 <h4 className="text-lg font-bold text-[#00d9ff] mb-2">{t(`inside.${key}.title`)}</h4>
@@ -314,13 +290,7 @@ export default function Home() {
       >
         <div className="max-w-4xl mx-auto">
           <h3 className="text-4xl font-bold text-center mb-12 font-sora">Common Questions</h3>
-          <motion.div
-            className="space-y-4"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
+          <motion.div className="space-y-4">
             {[
               { q: 'Is this for men or women?', a: 'Both. Always. No exceptions.' },
               { q: 'Do I need medical knowledge to read this?', a: 'No. It\'s written for any adult who wants to understand their body.' },
@@ -330,7 +300,6 @@ export default function Home() {
             ].map((item, i) => (
               <motion.div
                 key={i}
-                variants={itemVariants}
                 className="bg-[#0f132a]/50 border border-[#00d9ff]/20 rounded-lg p-6 hover:border-[#00d9ff]/50 transition-colors"
               >
                 <h4 className="text-lg font-bold text-[#00d9ff] mb-2">{item.q}</h4>
