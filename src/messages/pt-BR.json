@@ -1,5 +1,5 @@
 {
-  "home": {
-    "title": "WeightWise Health"
-  }
+  "welcome": "Bem-vindo ao WeightWise Health",
+  "description": "O primeiro sistema global onde o humano é o laboratório",
+  "cta": "Comece agora"
 }
