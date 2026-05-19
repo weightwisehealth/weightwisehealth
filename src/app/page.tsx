@@ -18,7 +18,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[#0a0e27] text-white font-sans">
-      {/* Navigation */}
       <motion.nav initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="fixed top-0 w-full z-50 bg-[#0a0e27]/95 backdrop-blur-md border-b border-[#00d9ff]/20 px-6 py-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <motion.h1 whileHover={{ scale: 1.05 }} className="text-2xl font-bold bg-gradient-to-r from-[#00d9ff] to-[#7c3aed] bg-clip-text text-transparent cursor-pointer font-sora">WeightWise Health</motion.h1>
@@ -31,18 +30,15 @@ export default function Home() {
         </div>
       </motion.nav>
 
-      {/* Hero Section */}
       <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }} className="pt-40 pb-20 px-6 text-center relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#00d9ff] opacity-5 rounded-full blur-3xl" />
         </div>
         
-        {/* Social Proof Badge */}
         <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6, delay: 0.05 }} className="inline-block mb-4 px-4 py-2 bg-[#00ff88]/10 border border-[#00ff88]/30 rounded-full relative z-10">
           <span className="text-[#00ff88] text-sm font-semibold">✓ 2,847 People Transforming Their Health</span>
         </motion.div>
 
-        {/* Scarcity Badge */}
         <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6, delay: 0.1 }} className="inline-block mb-6 px-4 py-2 bg-[#ff6600]/10 border border-[#ff6600]/30 rounded-full relative z-10 ml-4">
           <span className="text-[#ff6600] text-sm font-semibold">⚡ {spotsRemaining} Founding Spots Left</span>
         </motion.div>
@@ -55,7 +51,6 @@ export default function Home() {
         
         <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.25 }} className="text-xl md:text-2xl text-gray-300 mb-8 italic max-w-3xl mx-auto relative z-10">"You are about to see your body in a way you will <span className="font-bold">never be able to unsee.</span>"</motion.p>
 
-        {/* Primary CTA */}
         <motion.button initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.3 }} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={handleGumroad} className="bg-gradient-to-r from-[#ff6600] to-[#ff8533] hover:shadow-lg hover:shadow-[#ff6600]/50 text-white font-bold py-4 px-12 rounded-lg text-lg transition-all duration-300 relative z-10 cursor-pointer">
           Yes, Unlock My Founding Access
         </motion.button>
@@ -68,7 +63,6 @@ export default function Home() {
           PRICE: $79.90 NOW → $129.90 AFTER 100 BUYERS · NO COUNTDOWN TRICK
         </motion.p>
 
-        {/* Trust Signals */}
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.45 }} className="mt-8 flex justify-center gap-6 text-xs text-gray-400 relative z-10 flex-wrap">
           <span>✓ 30-day money-back guarantee</span>
           <span>✓ Secure checkout (SSL )</span>
@@ -76,7 +70,6 @@ export default function Home() {
         </motion.div>
       </motion.section>
 
-      {/* What This Is / Is Not */}
       <motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12">
@@ -107,7 +100,6 @@ export default function Home() {
         </div>
       </motion.section>
 
-      {/* Who This Is For */}
       <motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="py-20 px-6 bg-[#0f132a]/30">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-4xl font-bold mb-4 font-sora">WHO THIS IS FOR</h3>
@@ -122,7 +114,6 @@ export default function Home() {
         </div>
       </motion.section>
 
-      {/* The Architecture */}
       <motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
           <h3 className="text-4xl font-bold text-center mb-12 font-sora">THE ARCHITECTURE</h3>
@@ -137,7 +128,6 @@ export default function Home() {
         </div>
       </motion.section>
 
-      {/* What's Inside */}
       <motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="py-20 px-6 bg-[#0f132a]/30">
         <div className="max-w-6xl mx-auto">
           <h3 className="text-4xl font-bold text-center mb-4 font-sora">WHAT IS INSIDE</h3>
@@ -154,7 +144,6 @@ export default function Home() {
         </div>
       </motion.section>
 
-      {/* Pricing Section */}
       <motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="py-20 px-6 bg-gradient-to-b from-[#00d9ff]/10 to-[#0a0e27]/50 text-center">
         <h3 className="text-4xl font-bold mb-4 uppercase font-sora">Founding Access</h3>
         <p className="text-xl text-gray-300 mb-8">First 100 buyers. Founding price. Forever.</p>
@@ -180,7 +169,6 @@ export default function Home() {
           <p className="text-gray-400 text-xs mb-4">Offer closes: June 30, 2026</p>
         </motion.div>
 
-        {/* Secondary CTA */}
         <motion.button initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6 }} viewport={{ once: true }} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={handleGumroad} className="bg-gradient-to-r from-[#ff6600] to-[#ff8533] hover:shadow-lg hover:shadow-[#ff6600]/50 text-white font-bold py-4 px-12 rounded-lg text-lg transition-all duration-300 cursor-pointer mb-4">
           Start My Optimization Journey
         </motion.button>
@@ -188,7 +176,6 @@ export default function Home() {
         <p className="text-xs text-gray-500 uppercase tracking-wider">Secure Checkout via Gumroad · Instant PDF Delivery · Education Only · Not Medical Advice</p>
       </motion.section>
 
-      {/* FAQ Section */}
       <motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
           <h3 className="text-4xl font-bold text-center mb-12 font-sora">Common Objections</h3>
@@ -207,7 +194,6 @@ export default function Home() {
             ))}
           </motion.div>
 
-          {/* Risk Reversal */}
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="mt-12 bg-[#0a0e27]/50 border border-[#00ff88]/20 rounded-lg p-8 text-center">
             <h4 className="text-2xl font-bold text-[#00ff88] mb-4">100% Money-Back Guarantee</h4>
             <p className="text-gray-300 mb-4">If you do not find at least 3 actionable protocols that change how you approach your health, we refund 100% within 30 days. No questions asked.</p>
@@ -216,7 +202,6 @@ export default function Home() {
         </div>
       </motion.section>
 
-      {/* Credibility Section */}
       <motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="py-20 px-6 bg-[#0f132a]/30">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-4xl font-bold mb-12 font-sora">Backed By Science</h3>
@@ -235,7 +220,6 @@ export default function Home() {
         </div>
       </motion.section>
 
-      {/* Footer */}
       <motion.footer initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="py-12 px-6 border-t border-[#00d9ff]/20 text-center text-gray-400">
         <p>© 2026 WeightWise Health. All rights reserved.</p>
         <div className="mt-4 flex justify-center gap-6 text-sm">
