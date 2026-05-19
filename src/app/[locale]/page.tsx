@@ -47,7 +47,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0a0e27] text-white">
+    <div clas    <div clas    <div clas    <] text-white">
       {/* Navigation */}
       <motion.nav
         initial={{ opacity: 0, y: -20 }}
@@ -71,7 +71,8 @@ export default function Home() {
                 className="text-gray-300 hover:text-[#00d9ff] transition-colors capitalize"
               >
                 {t(`nav.${item}`)}
-              <              <        ))}
+              </motion.a>
+            ))}
           </div>
           <div className="flex gap-2">
             {languages.map((lang) => (
@@ -126,7 +127,7 @@ export default function Home() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="text-xl md:text-2xl text-gray-300 mb-8 italic max-w-3xl mx-auto relative z-10"
         >
-          {t('hero.subtitle')}
+          "{t('hero.subtitle')}"
         </motion.p>
         <motion.button
           initial={{ opacity: 0, scale: 0.9 }}
@@ -171,7 +172,7 @@ export default function Home() {
               <motion.div className="space-y-4" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
                 {[0, 1, 2, 3].map((i) => (
                   <motion.div key={i} variants={itemVariants} className="flex gap-4">
-                    <span className="text-[#00ff88] text-</span>2xl">
+                    <span className="text-[#00ff88] text-2xl flex-shrink-</span>0">
                     <p className="text-gray-300">{t(`whatIs.items.${i}`)}</p>
                   </motion.div>
                 ))}
@@ -191,7 +192,7 @@ export default function Home() {
               <motion.div className="space-y-4" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
                 {[0, 1, 2, 3].map((i) => (
                   <motion.div key={i} variants={itemVariants} className="flex gap-4">
-                    <span className="text-[#ff6600] text-</span>2xl">
+                    <span className="text-[#ff6600] text-2xl flex-shrink-</span>0">
                     <p className="text-gray-300">{t(`whatIsNot.items.${i}`)}</p>
                   </motion.div>
                 ))}
@@ -201,16 +202,14 @@ export default function Home() {
         </div>
       </motion.section>
 
-      {/* Who       {/* Who }
+      {/* Who This Is For */}
       <motion.section
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
+        tran        tran        tran        tran        tr once: true }}
         className="py-20 px-6 bg-[#0f132a]/30"
       >
-        <div className="max-w-4xl mx-auto text-center">
-          <h3 className="text-4xl font-bold mb-4">{t('whoFor.title')}</h3>
+        <div className="max-w-4x        <div className="max-w-4x        <div className="max-w-4x       4">{t('whoFor.title')}</h3>
           <p className="text-xl text-gray-300 mb-12">{t('whoFor.subtitle')}</p>
           <motion.div className="space-y-6" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             {[0, 1, 2].map((i) => (
@@ -221,8 +220,7 @@ export default function Home() {
               >
                 <span className="text-4xl font-black text-[#00d9ff]/30">{23 + i * 19}</span>
                 <p className="text-gray-300 mt-4">{t(`whoFor.items.${i}`)}</p>
-              </motion.div>
-            ))}
+                                        ))}
           </motion.div>
         </div>
       </motion.section>
@@ -232,7 +230,10 @@ export default function Home() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
-        viewport={{         viewport={{         viewport={{         viewport={{         vieName="max-w-4xl mx-auto">
+        viewport={{ once: true }}
+        className="py-20 px-6"
+      >
+        <div className="max-w-4xl mx-auto">
           <h3 className="text-4xl font-bold text-center mb-12">{t('architecture.title')}</h3>
           <motion.div className="space-y-6" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             {['knowledge', 'system', 'update'].map((key) => (
@@ -260,14 +261,15 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <h3 className="text-4xl font-bold text-center mb-4">{t('inside.title')}</h3>
           <p className="text-center text-gray-400 mb-12">{t('inside.subtitle')}</p>
-          <motion.div clas          <motion.div cs-2 gap-6" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+          <motion.div className="grid md:grid-cols-2 gap-6" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             {['foundation', 'hormonal', 'peptides', 'protocol'].map((key) => (
               <motion.div
                 key={key}
                 variants={itemVariants}
-                className="bg-[#0a0e27]/50 border border-[#00d9ff]/20 rounded-lg p-8 hover:border-[#00d9ff]/50 transition-colors"
+                className="bg-[#0a0e27]/50 bor                className="bg-[#0a0e27]/50 bor   er-[#00d9ff]/50 transition-colors"
               >
-                <h4 className="text-lg font-bold text-[#00d9ff] mb-2">{t(`inside.${key}.t                             <p className="text-gray-300 mb-4">{t(`inside.${key}.desc`)}</p>
+                <h4 className="text-lg font-bold text-[#00d9ff] mb-2">{t(`inside.${key}.title`)}</h4>
+                <p className="text-gray-300 mb-4">{t(`inside.${key}.desc`)}</p>
                 <p className="text-[#7c3aed] font-semibold text-sm">{t(`inside.${key}.chapters`)}</p>
               </motion.div>
             ))}
@@ -316,12 +318,7 @@ export default function Home() {
         className="py-20 px-6"
       >
         <div className="max-w-4xl mx-auto">
-          <h3 className="text-4xl font-bold text-center mb-12">Common Questions</h3>
-          <motion.div
-            className="space-y-4"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
+          <h3 className="text-4xl font-bold text-center mb-12">Common Questi          <h3 className="text-4xl font-bold text-center mb-12">Common Questi          <h3 className="text-4xl font-bold text-center mb-1           whileInView="visible"
             viewport={{ once: true }}
           >
             {[
@@ -352,15 +349,17 @@ export default function Home() {
         viewport={{ once: true }}
         className="py-12 px-6 border-t border-[#00d9ff]/20 text-center text-gray-400"
       >
-        < 2026 WeightWise Health. All rights reserved.</p>p>
+        <p>{t('footer.copyright')}</p>
         <div className="mt-4 flex justify-center gap-6 text-sm">
-          {['privacy', 'terms', 'contact'].map((item) => (
-            <motion.a key={item} href="#" whileHover={{ color: '#00d9ff' }} className="hover:text-[#00d9ff] transition-colors">
-              {item === 'privacy' && 'Privacy Policy'}
-              {item === 'terms' && 'Terms of Service'}
-              {item === 'contact' && 'Contact'}
-            </motion.a>
-          ))}
+          <motion.a href="#" whileHover={{ color: '#00d9ff' }} className="hover:text-[#00d9ff] transition-colors">
+            {t('footer.privacy')}
+          </motion.a>
+          <motion.a href="#" whileHover={{ color: '#00d9ff' }} className="hover:text-[#00d9ff] transition-colors">
+            {t('footer.terms')}
+          </motion.a>
+          <motion.a href="#" whileHover={{ color: '#00d9ff' }} className="hover:text-[#00d9ff] transition-colors">
+            {t('footer.contact')}
+          </motion.a>
         </div>
       </motion.footer>
     </div>
