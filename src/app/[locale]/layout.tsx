@@ -1,22 +1,14 @@
-import type { Metadata } from 'next';
-import { notFound } from 'next/navigation';
-import { getMessages, setRequestLocale } from 'next-intl/server';
-import { NextIntlClientProvider } from 'next-intl';
-import { routing } from '@/i18n/routing';
-import '@/styles/globals.css';
-
-export const dynamic = 'force-dynamic';
+import type { Metadata } from "next";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
+import "@/styles/globals.css";
 
 export const metadata: Metadata = {
-  title: 'WeightWise Health | The Optimization Bible',
-  description: 'Evidence-based hormone optimization. 40 chapters. 7 languages. One system.',
-  openGraph: {
-    title: 'WeightWise Health',
-    description: 'The Optimization Bible - Premium biomarker optimization',
-    url: 'https://weightwisehealth.com',
-    type: 'website',
-  },
+  title: "WeightWise Health",
+  description: "The Optimization Bible",
 };
+
+export const dynamic = "force-dynamic";
 
 export default async function RootLayout({
   children,
@@ -24,26 +16,21 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
   params: { locale: string };
-} ) {
-  if (!routing.locales.includes(locale as any)) {
-    notFound();
-  }
-
-  setRequestLocale(locale);
+}) {
   const messages = await getMessages();
 
   return (
-    <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
+    <html lang={locale}>
       <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet" />
       </head>
-      <body className="bg-[#0a0e27] text-white">
+      <body>
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
       </body>
     </html>
-  );
+   );
 }
