@@ -1,8 +1,6 @@
-import {getTranslations} from 'next-intl/server';
 import Link from 'next/link';
 
 export async function generateMetadata({params: {locale}}: {params: {}}) {
-  const t = await getTranslations({locale, namespace: 'about'});
   return {
     title: t('meta.title'),
     description: t('meta.description'),
