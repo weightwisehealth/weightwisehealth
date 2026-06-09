@@ -1,32 +1,21 @@
-import type { ReactNode } from 'react';
-import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
-import { notFound } from 'next/navigation';
-import { locales } from '@/i18n';
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 
-interface RootLayoutProps {
-  children: ReactNode;
-  params: {
-    locale: string;
-  };
-}
+const inter = Inter({ subsets: ["latin"] });
 
-export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
-}
+export const metadata: Metadata = {
+  title: "WeightWise Health - The Optimization Bible",
+  description: "Where the Human is the Laboratory",
+};
 
-export default async function RootLayout({ children, params: { locale } }: RootLayoutProps) {
-  if (!locales.includes(locale as any)) notFound();
-
-  const messages = await getMessages();
-
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang={locale}>
-      <body>
-        <NextIntlClientProvider messages={messages}>
-          {children}
-        </NextIntlClientProvider>
-      </body>
+    <html>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
