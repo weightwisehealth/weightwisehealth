@@ -2,8 +2,8 @@
  * src/app/[locale]/landing-client.tsx
  *
  * CLIENT COMPONENT — "use client" required for useState (FAQ, disclaimer).
- * All strings are hardcoded English. Structure is ready for next-intl
- * useTranslations() when i18n is activated — just extract every string to
+
+
  * a translation key.
  *
  * Sections (11):
