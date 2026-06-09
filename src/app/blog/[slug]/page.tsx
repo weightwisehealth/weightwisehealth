@@ -3,7 +3,7 @@ import Newsletter from '@/components/Newsletter';
 
 // TODO: Replace with real article fetching from CMS/database
 export default function ArticlePage({
-  params: {locale, slug}
+  params: {slug}
 }: {
   params: { slug: string }
 }) {
