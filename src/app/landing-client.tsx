@@ -1391,6 +1391,122 @@ function FAQSection() {
   )
 }
 
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   SECTION 11b — Chapter 1 Capture
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+function Chapter1CaptureSection() {
+  const [email, setEmail] = React.useState('')
+  const [status, setStatus] = React.useState<'idle' | 'loading' | 'success' | 'error'>('idle')
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!email || !email.includes('@')) return
+    setStatus('loading')
+    try {
+      const res = await fetch('/api/send-chapter1', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      })
+      if (res.ok) { setStatus('success'); setEmail('') }
+      else { setStatus('error') }
+    } catch { setStatus('error') }
+  }
+
+  return (
+    <section style={{ background: '#0D0D14', padding: '80px 24px' }}>
+      <div style={{ maxWidth: 600, margin: '0 auto', textAlign: 'center' }}>
+        <div style={{
+          display: 'inline-block',
+          background: 'rgba(0,212,255,0.1)',
+          border: '1px solid rgba(0,212,255,0.3)',
+          borderRadius: 8,
+          padding: '6px 16px',
+          fontSize: 12,
+          fontFamily: 'Space Mono, monospace',
+          color: '#00D4FF',
+          letterSpacing: '0.1em',
+          marginBottom: 24,
+        }}>FREE DOWNLOAD</div>
+        <h2 style={{
+          fontFamily: 'Space Grotesk, sans-serif',
+          fontSize: 'clamp(28px, 5vw, 40px)',
+          fontWeight: 800,
+          color: '#FFFFFF',
+          marginBottom: 16,
+          lineHeight: 1.2,
+        }}>Get Chapter 1 Free</h2>
+        <p style={{
+          fontFamily: 'Inter, sans-serif',
+          fontSize: 16,
+          color: '#8B8B9A',
+          marginBottom: 32,
+          lineHeight: 1.6,
+        }}>
+          The first chapter of The Optimization Bible — covering the hormonal framework behind modern weight loss. 87 pages of verified science, delivered to your inbox.
+        </p>
+        {status === 'success' ? (
+          <div style={{
+            background: 'rgba(0,212,255,0.1)',
+            border: '1px solid rgba(0,212,255,0.3)',
+            borderRadius: 12,
+            padding: '24px',
+            color: '#00D4FF',
+            fontFamily: 'Space Grotesk, sans-serif',
+            fontSize: 18,
+            fontWeight: 600,
+          }}>✓ Check your inbox — Chapter 1 is on its way.</div>
+        ) : (
+          <form onSubmit={handleSubmit} style={{ display: 'flex', gap: 12, flexWrap: 'wrap', justifyContent: 'center' }}>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="your@email.com"
+              required
+              style={{
+                flex: '1 1 260px',
+                maxWidth: 320,
+                padding: '14px 18px',
+                borderRadius: 10,
+                border: '1px solid rgba(255,255,255,0.15)',
+                background: 'rgba(255,255,255,0.05)',
+                color: '#FFFFFF',
+                fontFamily: 'Inter, sans-serif',
+                fontSize: 15,
+                outline: 'none',
+              }}
+            />
+            <button
+              type="submit"
+              disabled={status === 'loading'}
+              style={{
+                padding: '14px 28px',
+                borderRadius: 10,
+                border: 'none',
+                background: status === 'loading' ? '#444' : '#FF6B2B',
+                color: '#FFFFFF',
+                fontFamily: 'Space Grotesk, sans-serif',
+                fontWeight: 700,
+                fontSize: 15,
+                cursor: status === 'loading' ? 'not-allowed' : 'pointer',
+                whiteSpace: 'nowrap',
+              }}
+            >{status === 'loading' ? 'Sending...' : 'Send Me Chapter 1'}</button>
+          </form>
+        )}
+        {status === 'error' && (
+          <p style={{ marginTop: 12, color: '#FF4444', fontFamily: 'Inter, sans-serif', fontSize: 14 }}>
+            Something went wrong. Please try again.
+          </p>
+        )}
+      </div>
+    </section>
+  )
+}
+
 /* ═══════════════════════════════════════════════════════════════════════════
    SECTION 11 — Final CTA + Footer
    ═══════════════════════════════════════════════════════════════════════════ */
@@ -1666,6 +1782,7 @@ export default function LandingClient() {
       <ScienceSection />
       <PlatformSection />
       <FAQSection />
+      <Chapter1CaptureSection />
       <FinalCTAAndFooter />
     </main>
   )

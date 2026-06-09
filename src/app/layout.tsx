@@ -1,6 +1,10 @@
-export const metadata = {
+import type { Metadata } from 'next';
+import './globals.css';
+import Header from '@/components/Header';
+
+export const metadata: Metadata = {
   title: 'WeightWise Health',
-  description: 'Optimize your hormones',
+  description: 'Evidence-based hormone optimization',
 };
 
 export default function RootLayout({
@@ -9,8 +13,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html>
+    <html lang="en">
       <body>
+        <Header />
         {children}
       </body>
     </html>
